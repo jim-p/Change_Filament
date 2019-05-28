@@ -1,0 +1,124 @@
+{#
+OctoPrint Change_Filament plugin
+
+Copyright (c) 2019, Jim Pingle <jim@pingle.org>
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this
+   list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its
+   contributors may be used to endorse or promote products derived from
+   this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#}
+
+<div style="background-color: #d9534f; color: #fff; margin: 10px; padding: 10px; border-radius: 4px">
+  Warning: Preheat the nozzle to the correct temperature for the old filament
+  before unloading, and preheat the nozzle to the correct temperature for the
+  new filament before loading.
+</div>
+
+<form class="form-horizontal">
+  <h3>{{ _('Extruder Settings') }}</h3>
+  <div class="control-group">
+    <label class="control-label">{{ _('Unload Length') }}:</label>
+    <div class="controls">
+      <div class="input-append">
+        <input type="number" step="0.1" data-bind="value: settings.plugins.Change_Filament.unload_length">
+        <span class="add-on">mm</span>
+      </div>
+      <span class="help-block">{{ _('Length of filament to reverse extrude when unloading.') }}</span>
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label">{{ _('Unload Speed') }}:</label>
+    <div class="controls">
+      <div class="input-append">
+        <input type="number" step="0.1" data-bind="value: settings.plugins.Change_Filament.unload_speed">
+        <span class="add-on">mm/m</span>
+      </div>
+      <span class="help-block">{{ _('How fast to unload the filament.') }}</span>
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label">{{ _('Load Length') }}:</label>
+    <div class="controls">
+      <div class="input-append">
+        <input type="number" step="0.1" data-bind="value: settings.plugins.Change_Filament.load_length">
+        <span class="add-on">mm</span>
+      </div>
+      <span class="help-block">{{ _('Length of filament to extrude when loading.') }}</span>
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label">{{ _('Load Speed') }}:</label>
+    <div class="controls">
+      <div class="input-append">
+        <input type="number" step="0.1" data-bind="value: settings.plugins.Change_Filament.load_speed">
+        <span class="add-on">mm/m</span>
+      </div>
+      <span class="help-block">{{ _('How fast to extrude when loading filament.') }}</span>
+    </div>
+  </div>
+
+  <h3>{{ _('Print Head Settings') }}</h3>
+  <div class="control-group">
+    <label class="control-label">{{ _('Y Park') }}:</label>
+    <div class="controls">
+      <div class="input-append">
+        <input type="number" step="0.1" data-bind="value: settings.plugins.Change_Filament.y_park">
+        <span class="add-on">mm</span>
+      </div>
+      <span class="help-block">{{ _('Position on the Y axis where the head will be moved when loading or unloading.') }}</span>
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label">{{ _('X Park') }}:</label>
+    <div class="controls">
+      <div class="input-append">
+        <input type="number" step="0.1" data-bind="value: settings.plugins.Change_Filament.x_park">
+        <span class="add-on">mm</span>
+      </div>
+      <span class="help-block">{{ _('Position on the X axis where the head will be moved when loading or unloading. Depending on the filament path, may be best set to the midpoint of the X axis.') }}</span>
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label">{{ _('Z Lift Relative') }}:</label>
+    <div class="controls">
+      <div class="input-append">
+        <input type="number" step="0.1" data-bind="value: settings.plugins.Change_Filament.z_lift_relative">
+        <span class="add-on">mm</span>
+      </div>
+      <span class="help-block">{{ _('How high to move the Z axis before unloading.') }}</span>
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label">{{ _('Park Speed') }}:</label>
+    <div class="controls">
+      <div class="input-append">
+        <input type="number" step="0.1" data-bind="value: settings.plugins.Change_Filament.park_speed">
+        <span class="add-on">mm/m</span>
+      </div>
+      <span class="help-block">{{ _('How fast to move the head when parking.') }}</span>
+    </div>
+  </div>
+
+</form>
