@@ -33,8 +33,8 @@ $(function() {
 	function Change_filamentViewModel(parameters) {
 		var self = this;
 
-		self.settings = parameters[1];
-		self.controlViewModel = parameters[2];
+		self.settings = parameters[0];
+		self.controlViewModel = parameters[1];
 
 		self.getAdditionalControls = function() {
 			var settings = self.settings.settings.plugins.Change_Filament;
@@ -42,7 +42,7 @@ $(function() {
 			return [{
 				'customClass': '', 'layout': 'horizontal_grid', 'name': 'Change Filament', 'children':[
 					{'width': '11', 'output': 'WARNING: Preheat first!'},
-					{'width': '6', 'commands': [
+					{'width': '4', 'commands': [
 						'M117 Preparing to unload',
 						'M83',
 						'G1 E-5 F300',
@@ -57,16 +57,17 @@ $(function() {
 						'M18 E',
 						'M117 Replace filament, set new temp, click Load'
 						],
-						'customClass': 'btn', 'additionalClasses': 'nowrap', 'name': 'Unload'},
-					{'width': '6', 'commands': [
+						'customClass': 'btn', 'additionalClasses': 'nowrap', 'name': 'Unload Filament'},
+					{'width': '4', 'commands': [
 						'M117 Parking nozzle for load',
 						'G90',
 						'G0 Y' + settings.y_park() + ' X' + settings.x_park() + ' F' + settings.park_speed(),
 						'M117 Loading filament',
 						'M83',
-						'G1 E' + settings.load_length() + ' F' + settings.load_speed()
+						'G1 E' + settings.load_length() + ' F' + settings.load_speed(),
+						'M117 Replace filament, set new temp, click Load'
 						],
-						'customClass': 'btn', 'additionalClasses': 'nowrap', 'name': 'Load'}
+						'customClass': 'btn', 'additionalClasses': 'nowrap', 'name': 'Load Filament'}
 				]
 			}];
 

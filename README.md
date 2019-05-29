@@ -15,11 +15,11 @@ or manually using this URL:
 
 ## Configuration
 
-* **unload_length**: Length of filament to reverse extrude when unloading, in mm. (Default: `500`)
-* **unload_speed**: How fast to unload the filament, in mm/m. (Default: `3600`)
-* **load_length**: Length of filament to extrude when loading, in mm. (Default: `50`)
-* **load_speed**: How fast to extrude when loading filament, in mm/m. (Default: `1800`)
-* **y_park**: Position on the Y axis where the head will be moved when loading or unloading. (Default: `0`)
-* **x_park**: Position on the X axis where the head will be moved when loading or unloading. Depending on the filament path, may be best set to the midpoint of the X axis. (Default: `0`)
-* **z_lift_relative**: How high to move the Z axis before unloading, in mm. (Default: `10`)
-* **park_speed**: How fast to move the head when parking, in mm/m. (Default: `500`)
+* **unload_length**: Length of filament to reverse extrude when unloading, in mm.
+* **unload_speed**: How fast to unload the filament, in mm/m.
+* **load_length**: Length of filament to extrude when loading, in mm.
+* **load_speed**: How fast to extrude when loading filament, in mm/m.
+* **y_park**: Position on the Y axis where the head will be moved when loading or unloading.
+* **x_park**: Position on the X axis where the head will be moved when loading or unloading. Depending on the filament path, may be best set to the midpoint of the X axis.
+* **z_lift_relative**: How high to move the Z axis before unloading, in mm.
+* **park_speed**: How fast to move the head when parking, in mm/m.

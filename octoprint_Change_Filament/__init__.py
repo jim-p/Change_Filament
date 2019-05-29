@@ -39,14 +39,14 @@ class Change_filamentPlugin(octoprint.plugin.SettingsPlugin,
 
 	def get_settings_defaults(self):
 		return dict(
-			unload_length=500,
-			unload_speed=3600,
-			load_length=50,
-			load_speed=1800,
+			unload_length=600,
+			unload_speed=1800,
+			load_length=100,
+			load_speed=900,
 			y_park=0,
 			x_park=0,
 			z_lift_relative=10,
-			park_speed=500
+			park_speed=1000
 		)
 
 	def get_template_configs(self):
