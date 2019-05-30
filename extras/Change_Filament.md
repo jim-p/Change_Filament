@@ -7,7 +7,7 @@ description: Facilitates changing filament (backs out old, loads new)
 author: Jim Pingle
 license: bsd-3-clause
 
-date: 2019-05-27
+date: 2019-05-29
 
 homepage: https://github.com/jim-p/Change_Filament
 source: https://github.com/jim-p/Change_Filament
@@ -17,11 +17,14 @@ tags:
 - filament
 
 screenshots:
-- url: url of a screenshot, /assets/img/...
-  alt: alt-text of a screenshot
-  caption: caption of a screenshot
+- url: https://raw.githubusercontent.com/jim-p/Change_Filament/master/screenshots/cf_buttons.png
+  alt: Change Filament Buttons
+  caption: Change Filament Buttons
+- url: https://raw.githubusercontent.com/jim-p/Change_Filament/master/screenshots/cf_settings.png
+  alt: Change Filament Settings
+  caption: Change Filament Settings
 
-featuredimage: url of a featured image for your plugin, /assets/img/...
+featuredimage: https://raw.githubusercontent.com/jim-p/Change_Filament/master/screenshots/cf_buttons.png
 
 ---
 
