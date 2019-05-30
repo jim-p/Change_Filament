@@ -33,19 +33,11 @@ the control box to use, instead of doing everything in OctoPrint.
 
 Configuration:
 
-* **unload_length**: Lenth of filament to reverse out, in mm (Default: `500`)
-* **unload_speed**: How fast to unload the filament, in mm/m (Default: `3600`)
-* **load_length**: Length of filament to extrude when loading, in mm (Default:
-  `50`)
-* **load_speed**: How fast to extrude when loading filament, in mm/m (Default:
-  `1800`)
-* **y_park**: Position on the Y axis where the head will be moved when loading
-  or unloading (Default: `0`)
-* **x_park**: Position on the X axis where the head will be moved when loading
-  or unloading. Depending on the filament path, may be best set to the midpoint
-  of the X axis. (Default: `0`)
-* **z_lift_relative**: How high to move the Z axis before unloading, in mm
-  (Default: `10`)
-* **park_speed**: How fast to move the head when parking, in mm/m (Default:
-  `500`)
-
+* **Unload Length**: Length of filament to reverse extrude when unloading, in mm.
+* **Unload Speed**: How fast to unload the filament, in mm/m.
+* **Load Length**: Length of filament to extrude when loading, in mm.
+* **Load Speed**: How fast to extrude when loading filament, in mm/m.
+* **Y Park**: Position on the Y axis where the head will be moved when loading or unloading.
+* **X Park**: Position on the X axis where the head will be moved when loading or unloading. Depending on the filament path, may be best set to the midpoint of the X axis.
+* **Z Lift Relative**: How high to move the Z axis before unloading, in mm.
+* **Park Speed**: How fast to move the head when parking, in mm/m.

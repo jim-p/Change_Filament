@@ -41,33 +41,38 @@ $(function() {
 
 			return [{
 				'customClass': '', 'layout': 'horizontal_grid', 'name': 'Change Filament', 'children':[
-					{'width': '11', 'output': 'WARNING: Preheat first!'},
-					{'width': '4', 'commands': [
-						'M117 Preparing to unload',
+					{'width': '2', 'commands': [
+						'M117 Parking nozzle',
 						'M83',
-						'G1 E-5 F300',
-						'M117 Parking nozzle for unload',
+						'G1 E-5 F50',
 						'G91',
 						'G0 Z' + settings.z_lift_relative() + ' F' + settings.park_speed(),
 						'G90',
 						'G0 Y' + settings.y_park() + ' X' + settings.x_park() + ' F' + settings.park_speed(),
+						'M117 Nozzle parked'
+						],
+						'customClass': 'btn', 'additionalClasses': 'nowrap btn-info fa fa-check', 'name': ' Park'},
+					{'width': '2', 'commands': [
 						'M117 Unloading filament',
 						'M83',
 						'G1 E-' + settings.unload_length() + ' F' + settings.unload_speed(),
 						'M18 E',
 						'M117 Replace filament, set new temp, click Load'
 						],
-						'customClass': 'btn', 'additionalClasses': 'nowrap', 'name': 'Unload Filament'},
-					{'width': '4', 'commands': [
-						'M117 Parking nozzle for load',
-						'G90',
-						'G0 Y' + settings.y_park() + ' X' + settings.x_park() + ' F' + settings.park_speed(),
+						'customClass': 'btn', 'additionalClasses': 'nowrap btn-success fa fa-fast-backward', 'name': ' Unload'},
+					{'width': '2', 'commands': [
 						'M117 Loading filament',
 						'M83',
 						'G1 E' + settings.load_length() + ' F' + settings.load_speed(),
 						'M117 Replace filament, set new temp, click Load'
 						],
-						'customClass': 'btn', 'additionalClasses': 'nowrap', 'name': 'Load Filament'}
+						'customClass': 'btn', 'additionalClasses': 'nowrap btn-warning fa fa-step-forward', 'name': ' Load'},
+					{'width': '2', 'commands': [
+						'M600'
+						],
+						'customClass': 'btn', 'additionalClasses': 'nowrap btn-danger fa fa-refresh', 'name': ' M600'},
+					{'width': '11', 'output': 'WARNING: Preheat first! Refresh page after changing settings.'},
+					{'width': '11', 'output': 'M600 requires special support in Marlin and must be completed using the control box.'},
 				]
 			}];
 
