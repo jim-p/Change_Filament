@@ -17,14 +17,14 @@ tags:
 - filament
 
 screenshots:
-- url: https://raw.githubusercontent.com/jim-p/Change_Filament/master/screenshots/cf_buttons.png
+- url: /assets/img/plugins/Change_Filament/cf_buttons.png
   alt: Change Filament Buttons
   caption: Change Filament Buttons
-- url: https://raw.githubusercontent.com/jim-p/Change_Filament/master/screenshots/cf_settings.png
+- url: /assets/img/plugins/Change_Filament/cf_settings.png
   alt: Change Filament Settings
   caption: Change Filament Settings
 
-featuredimage: https://raw.githubusercontent.com/jim-p/Change_Filament/master/screenshots/cf_buttons.png
+featuredimage: /assets/img/plugins/Change_Filament/cf_buttons.png
 
 ---
 
