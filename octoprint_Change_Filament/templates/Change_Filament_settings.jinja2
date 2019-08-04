@@ -81,6 +81,33 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
   <h3>{{ _('Print Head Settings') }}</h3>
   <div class="control-group">
+    <label class="control-label">{{ _('Pause Before Park') }}:</label>
+    <div class="controls">
+      <div class="input-append">
+        <input type="checkbox" data-bind="checked: settings.plugins.Change_Filament.pause_before_park">
+      </div>
+      <span class="help-block">{{ _('Send M0 to pause Octoprint before parking.') }}</span>
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label">{{ _('Retract Before Park') }}:</label>
+    <div class="controls">
+      <div class="input-append">
+        <input type="checkbox" data-bind="checked: settings.plugins.Change_Filament.retract_before_park">
+      </div>
+      <span class="help-block">{{ _('Perform a small retract before parking.') }}</span>
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label">{{ _('Home Before Park') }}:</label>
+    <div class="controls">
+      <div class="input-append">
+        <input type="checkbox" data-bind="checked: settings.plugins.Change_Filament.home_before_park">
+      </div>
+      <span class="help-block">{{ _('Home X/Y before moving to the X/Y parking position.') }}</span>
+    </div>
+  </div>
+  <div class="control-group">
     <label class="control-label">{{ _('Y Park') }}:</label>
     <div class="controls">
       <div class="input-append">

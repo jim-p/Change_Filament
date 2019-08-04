@@ -40,6 +40,9 @@ Configuration:
 * **Unload Speed**: How fast to unload the filament, in mm/m.
 * **Load Length**: Length of filament to extrude when loading, in mm.
 * **Load Speed**: How fast to extrude when loading filament, in mm/m.
+* **Pause Before Park**: Send M0 to pause Octoprint before parking.
+* **Retract Before Park**: Perform a small retract before parking.
+* **Home Before Park**: Home X/Y before moving to the X/Y parking position.
 * **Y Park**: Position on the Y axis where the head will be moved when loading or unloading.
 * **X Park**: Position on the X axis where the head will be moved when loading or unloading. Depending on the filament path, may be best set to the midpoint of the X axis.
 * **Z Lift Relative**: How high to move the Z axis before unloading, in mm.

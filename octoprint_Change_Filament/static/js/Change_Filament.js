@@ -39,14 +39,33 @@ $(function() {
 		self.getAdditionalControls = function() {
 			var settings = self.settings.settings.plugins.Change_Filament;
 
+			var preparkpause = '';
+			if (settings.pause_before_park() != false) {
+				preparkpause = 'M0';
+			}
+
+			var preparkhome = '';
+			if (settings.home_before_park() != false) {
+				preparkhome = 'G28 X0 Y0';
+			}
+
+			var preparkextrude0 = '';
+			var preparkextrude1 = '';
+			if (settings.retract_before_park() != false) {
+				preparkextrude0 = 'M83';
+				preparkextrude1 = 'G1 E-5 F50';
+			}
+
 			return [{
 				'customClass': '', 'layout': 'horizontal_grid', 'name': 'Change Filament', 'children':[
 					{'width': '2', 'commands': [
 						'M117 Parking nozzle',
-						'M83',
-						'G1 E-5 F50',
+						preparkpause,
+						preparkextrude0,
+						preparkextrude1,
 						'G91',
 						'G0 Z' + settings.z_lift_relative() + ' F' + settings.park_speed(),
+						preparkhome,
 						'G90',
 						'G0 Y' + settings.y_park() + ' X' + settings.x_park() + ' F' + settings.park_speed(),
 						'M117 Nozzle parked'
@@ -64,7 +83,7 @@ $(function() {
 						'M117 Loading filament',
 						'M83',
 						'G1 E' + settings.load_length() + ' F' + settings.load_speed(),
-						'M117 Replace filament, set new temp, click Load'
+						'M117 New Filament Loaded'
 						],
 						'customClass': 'btn', 'additionalClasses': 'nowrap btn-warning fa fa-step-forward', 'name': ' Load'},
 					{'width': '2', 'commands': [
