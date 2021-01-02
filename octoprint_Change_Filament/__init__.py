@@ -57,7 +57,8 @@ class Change_filamentPlugin(octoprint.plugin.SettingsPlugin,
 
 	def get_assets(self):
 		return dict(
-			js=["js/Change_Filament.js"]
+			js=["js/Change_Filament.js"],
+			css=["css/Change_Filament.css"]
 		)
 
 	def get_update_information(self):

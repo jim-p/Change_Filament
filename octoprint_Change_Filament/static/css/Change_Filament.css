@@ -1,0 +1,35 @@
+.changefilament-park::before {
+    content: "\f00c";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    display: inline-block;
+    padding-right: 6px;
+    vertical-align: middle;
+}
+
+.changefilament-unload::before {
+    content: "\f049";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    display: inline-block;
+    padding-right: 6px;
+    vertical-align: middle;
+}
+
+.changefilament-load::before {
+    content: "\f051";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    display: inline-block;
+    padding-right: 6px;
+    vertical-align: middle;
+}
+
+.changefilament-m600::before {
+    content: "\f021";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    display: inline-block;
+    padding-right: 6px;
+    vertical-align: middle;
+}
