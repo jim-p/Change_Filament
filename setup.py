@@ -1,7 +1,7 @@
 plugin_identifier = "Change_Filament"
 plugin_package = "octoprint_Change_Filament"
 plugin_name = "Change_Filament"
-plugin_version = "0.3.1"
+plugin_version = "0.3.2"
 plugin_description = """Facilitates changing filament (unloads old, loads new)"""
 plugin_author = "Jim Pingle"
 plugin_author_email = "jim@pingle.org"
